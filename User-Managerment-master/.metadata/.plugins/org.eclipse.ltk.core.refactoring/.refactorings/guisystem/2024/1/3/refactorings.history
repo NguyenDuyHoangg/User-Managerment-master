@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;jsoft.gui.article.ArticleLibrary.viewProjectImage(...)&apos; to &apos;viewSections&apos;&#x0D;&#x0A;- Original project: &apos;guisystem&apos;&#x0D;&#x0A;- Original element: &apos;jsoft.gui.article.ArticleLibrary.viewProjectImage(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;jsoft.gui.article.ArticleLibrary.viewSections(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;viewProjectImage&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java&lt;jsoft.gui.article{ArticleLibrary.java[ArticleLibrary~viewProjectImage~QArrayList\&lt;QArticleOject;&gt;;" name="viewSections" references="true" stamp="1705577819076" version="1.0"/>
+</session>

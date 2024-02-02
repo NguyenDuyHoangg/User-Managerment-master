@@ -1,0 +1,1 @@
+Description: Click 'Người sử dụng' -> 'Danh sách' to show user infomation and chart below user infomation. To show detailed user information then click icon 'Xem chi tiết'. To update user information then click icon 'Sửa'. To delete user then click icon 'Xóa'. To delete absolute or restore user then click 'Thùng rác'.

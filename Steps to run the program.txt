@@ -1,0 +1,9 @@
+Steps to run the program:
+	Step1: Import script 'jp225_data' run on localhost:8080
+	Step2: Open folder 'built' on Eclipse IDE for Enterprise Java and Web Developers version 06-2023
+	Step3: Setup Apache Tomcat v9.0 run on port 8081
+	Step4: Change name url, username, userpass in "adsystem -> Java Resources -> src/... -> ConnectionPoolImpl.java" 
+	Step5: Run server (Ctrl + F11) in "adsystem -> Java Resources -> src/... -> ads -> user -> UserProfiles.Java"
+	Step6: sign-in:
+		name: admin
+		pass: 123456

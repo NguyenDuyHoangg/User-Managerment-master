@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trang JSP căn bản</title>
+</head>
+<body>
+
+	<form action="basic.jsp" method="post">
+		<label>Nhập tên: </label>
+		<input type="text" name="txtName">
+		<button type="submit">Gửi</button>
+	</form>
+	
+
+
+</body>
+</html>

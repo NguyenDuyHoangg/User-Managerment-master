@@ -1,0 +1,13 @@
+﻿/*Đây là chú thích của mã định dạng CSS*/
+
+/*Các xử lý cho thẻ trong trang basic.html*/
+body{
+	background: #fffffe; 
+	color: #555; 
+	font-family: Arial; 
+	font-size:14px;
+}
+
+h1{
+	color: yellow;
+}

@@ -1,0 +1,358 @@
+package jsoft.ads.main;
+
+import java.io.*;
+import java.io.PrintWriter;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+import jsoft.*;
+import jsoft.objects.*;
+
+/**
+ * Servlet implementation class View
+ */
+@WebServlet("/view")
+public class View extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private static final String CONTENT_TYPE = "text/html; charset=utf-8";
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public View() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//Tìm thông tin đăng nhập
+		UserObject user = (UserObject)request.getSession().getAttribute("userLogined");
+		if(user==null) {
+			response.sendRedirect("/adv/user/login");
+		}else {
+			view(request, response, user);
+		}
+	}
+	
+	protected void view(HttpServletRequest request, HttpServletResponse response, UserObject user) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// Xác định kiểu nội dung xuất về trình khách
+		response.setContentType(CONTENT_TYPE);
+				
+		// Tạo đối tượng xuất nội dung
+		PrintWriter out = response.getWriter();
+		
+		
+		
+		out.append("<!-- ======= Sidebar ======= -->");
+		out.append("<aside id=\"sidebar\" class=\"sidebar\">");
+		
+		out.append("<ul class=\"sidebar-nav\" id=\"sidebar-nav\">");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" href=\"index.html\">");
+		out.append("<i class=\"bi bi-grid\"></i>");
+		out.append("<span>Dashboard</span>");
+		out.append("</a>");
+		out.append("</li><!-- End Dashboard Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" data-bs-target=\"#components-nav\" data-bs-toggle=\"collapse\" href=\"#\">");
+		out.append("<i class=\"bi bi-menu-button-wide\"></i><span>Components</span><i class=\"bi bi-chevron-down ms-auto\"></i>");
+		out.append("</a>");
+		out.append("<ul id=\"components-nav\" class=\"nav-content collapse \" data-bs-parent=\"#sidebar-nav\">");
+		out.append("<li>");
+		out.append("<a href=\"components-alerts.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Alerts</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-accordion.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Accordion</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-badges.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Badges</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-breadcrumbs.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Breadcrumbs</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-buttons.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Buttons</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-cards.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Cards</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-carousel.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Carousel</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-list-group.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>List group</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-modal.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Modal</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-tabs.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Tabs</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-pagination.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Pagination</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-progress.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Progress</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-spinners.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Spinners</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"components-tooltips.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Tooltips</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("</ul>");
+		out.append("</li><!-- End Components Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" data-bs-target=\"#forms-nav\" data-bs-toggle=\"collapse\" href=\"#\">");
+		out.append("<i class=\"bi bi-journal-text\"></i><span>Forms</span><i class=\"bi bi-chevron-down ms-auto\"></i>");
+		out.append("</a>");
+		out.append("<ul id=\"forms-nav\" class=\"nav-content collapse \" data-bs-parent=\"#sidebar-nav\">");
+		out.append("<li>");
+		out.append("<a href=\"forms-elements.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Form Elements</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"forms-layouts.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Form Layouts</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"forms-editors.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Form Editors</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"forms-validation.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Form Validation</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("</ul>");
+		out.append("</li><!-- End Forms Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" data-bs-target=\"#tables-nav\" data-bs-toggle=\"collapse\" href=\"#\">");
+		out.append("<i class=\"bi bi-layout-text-window-reverse\"></i><span>Tables</span><i class=\"bi bi-chevron-down ms-auto\"></i>");
+		out.append("</a>");
+		out.append("<ul id=\"tables-nav\" class=\"nav-content collapse \" data-bs-parent=\"#sidebar-nav\">");
+		out.append("<li>");
+		out.append("<a href=\"tables-general.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>General Tables</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"tables-data.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Data Tables</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("</ul>");
+		out.append("</li><!-- End Tables Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" data-bs-target=\"#charts-nav\" data-bs-toggle=\"collapse\" href=\"#\">");
+		out.append("<i class=\"bi bi-bar-chart\"></i><span>Charts</span><i class=\"bi bi-chevron-down ms-auto\"></i>");
+		out.append("</a>");
+		out.append("<ul id=\"charts-nav\" class=\"nav-content collapse \" data-bs-parent=\"#sidebar-nav\">");
+		out.append("<li>");
+		out.append("<a href=\"charts-chartjs.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Chart.js</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"charts-apexcharts.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>ApexCharts</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"charts-echarts.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>ECharts</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("</ul>");
+		out.append("</li><!-- End Charts Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" data-bs-target=\"#icons-nav\" data-bs-toggle=\"collapse\" href=\"#\">");
+		out.append("<i class=\"bi bi-gem\"></i><span>Icons</span><i class=\"bi bi-chevron-down ms-auto\"></i>");
+		out.append("</a>");
+		out.append("<ul id=\"icons-nav\" class=\"nav-content collapse \" data-bs-parent=\"#sidebar-nav\">");
+		out.append("<li>");
+		out.append("<a href=\"icons-bootstrap.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Bootstrap Icons</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"icons-remix.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Remix Icons</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("<li>");
+		out.append("<a href=\"icons-boxicons.html\">");
+		  out.append("<i class=\"bi bi-circle\"></i><span>Boxicons</span>");
+		out.append("</a>");
+		out.append("</li>");
+		out.append("</ul>");
+		out.append("</li><!-- End Icons Nav -->");
+		
+		out.append("<li class=\"nav-heading\">Pages</li>");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" href=\"users-profile.html\">");
+		out.append("<i class=\"bi bi-person\"></i>");
+		out.append("<span>Profile</span>");
+		out.append("</a>");
+		out.append("</li><!-- End Profile Page Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" href=\"pages-faq.html\">");
+		out.append("<i class=\"bi bi-question-circle\"></i>");
+		out.append("<span>F.A.Q</span>");
+		out.append("</a>");
+		out.append("</li><!-- End F.A.Q Page Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" href=\"pages-contact.html\">");
+		out.append("<i class=\"bi bi-envelope\"></i>");
+		out.append("<span>Contact</span>");
+		out.append("</a>");
+		out.append("</li><!-- End Contact Page Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" href=\"pages-register.html\">");
+		out.append("<i class=\"bi bi-card-list\"></i>");
+		out.append("<span>Register</span>");
+		out.append("</a>");
+		out.append("</li><!-- End Register Page Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" href=\"pages-login.html\">");
+		out.append("<i class=\"bi bi-box-arrow-in-right\"></i>");
+		out.append("<span>Login</span>");
+		out.append("</a>");
+		out.append("</li><!-- End Login Page Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link collapsed\" href=\"pages-error-404.html\">");
+		out.append("<i class=\"bi bi-dash-circle\"></i>");
+		out.append("<span>Error 404</span>");
+		out.append("</a>");
+		out.append("</li><!-- End Error 404 Page Nav -->");
+		
+		out.append("<li class=\"nav-item\">");
+		out.append("<a class=\"nav-link \" href=\"pages-blank.html\">");
+		out.append("<i class=\"bi bi-file-earmark\"></i>");
+		out.append("<span>Blank</span>");
+		out.append("</a>");
+		out.append("</li><!-- End Blank Page Nav -->");
+		
+		out.append("</ul>");
+		
+		out.append("</aside><!-- End Sidebar-->");
+		
+		out.append("<main id=\"main\" class=\"main\">");
+		
+		out.append("<div class=\"pagetitle d-flex\">");
+		out.append("<h1>Blank Page</h1>");
+		out.append("<nav class=\"ms-auto\" >");
+		out.append("<ol class=\"breadcrumb\">");
+		out.append("<li class=\"breadcrumb-item\"><a href=\"/adv/view\">Home</a></li>");
+		out.append("<li class=\"breadcrumb-item\">Pages</li>");
+		out.append("<li class=\"breadcrumb-item active\">Blank</li>");
+		out.append("</ol>");
+		out.append("</nav>");
+		out.append("</div><!-- End Page Title -->");
+		
+		out.append("<section class=\"section\">");
+		out.append("<div class=\"row\">");
+		out.append("<div class=\"col-lg-12\">");
+		
+		out.append("<div class=\"card\">");
+		out.append("<div class=\"card-body\">");
+		  out.append("<h5 class=\"card-title\">Example Card</h5>");
+		  out.append("<p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>");
+		out.append("</div>");
+		out.append("</div>");
+		
+		out.append("</div>");//col-lg-12
+		out.append("</div>");//row
+		out.append("</section>");
+		
+		out.append("</main><!-- End #main -->");
+		
+		out.append("<!-- ======= Footer ======= -->");
+		out.append("<footer id=\"footer\" class=\"footer\">");
+		out.append("<div class=\"copyright\">");
+		out.append("&copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved");
+		out.append("</div>");
+		out.append("<div class=\"credits\">");
+		out.append("<!-- All the links in the footer should remain intact. -->");
+		out.append("<!-- You can delete the links only if you purchased the pro version. -->");
+		out.append("<!-- Licensing information: https://bootstrapmade.com/license/ -->");
+		out.append("<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->");
+		out.append("Designed by <a href=\"https://bootstrapmade.com/\">BootstrapMade</a>");
+		out.append("</div>");
+		out.append("</footer><!-- End Footer -->");
+		
+		out.append("<a href=\"#\" class=\"back-to-top d-flex align-items-center justify-content-center\"><i class=\"bi bi-arrow-up-short\"></i></a>");
+		
+		out.append("<!-- Vendor JS Files -->");
+		out.append("<script src=\"/adv/js/apexcharts.min.js\"></script>");
+		out.append("<script src=\"/adv/js/bootstrap.bundle.min.js\"></script>");
+		
+		out.append("<!-- Template Main JS File -->");
+		out.append("<script src=\"/adv/js/main.js\"></script>");
+		
+		out.append("</body>");
+		
+		out.append("</html>");
+		
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

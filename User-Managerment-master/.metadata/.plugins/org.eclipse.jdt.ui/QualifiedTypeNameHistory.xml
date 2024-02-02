@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="net.htmlparser.jericho.CharacterReference"/>
+    <fullyQualifiedTypeName name="jsoft.library.Utilities_Date"/>
+    <fullyQualifiedTypeName name="jsoft.objects.CategoryOject"/>
+    <fullyQualifiedTypeName name="jsoft.ads.section.SectionControl"/>
+    <fullyQualifiedTypeName name="jsoft.objects.SectionObject"/>
+    <fullyQualifiedTypeName name="jsoft.ads.section.SECTION_SORT"/>
+    <fullyQualifiedTypeName name="jsoft.ads.user.UserLibrary"/>
+    <fullyQualifiedTypeName name="jsoft.objects.UserObject"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="jsoft.gui.basic.BasicImpl"/>
+    <fullyQualifiedTypeName name="jsoft.ConnectionPool"/>
+    <fullyQualifiedTypeName name="jsoft.ShareControl"/>
+    <fullyQualifiedTypeName name="jsoft.objects.ArticleExtendsObject"/>
+    <fullyQualifiedTypeName name="jsoft.gui.article.ArticleModel"/>
+    <fullyQualifiedTypeName name="org.javatuples.Quartet"/>
+    <fullyQualifiedTypeName name="org.javatuples.Pair"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="jsoft.objects.CategoryObject"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Short"/>
+    <fullyQualifiedTypeName name="org.javatuples.Triplet"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="jsoft.objects.ArticleOject"/>
+    <fullyQualifiedTypeName name="jsoft.gui.article.ArticleLibrary"/>
+    <fullyQualifiedTypeName name="jsoft.library.Utilities"/>
+    <fullyQualifiedTypeName name="jsoft.library.Utilities_Text"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+</qualifiedTypeNameHistroy>

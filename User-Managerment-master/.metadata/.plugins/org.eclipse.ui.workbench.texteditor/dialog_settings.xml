@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="search-close"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="search-close"/>
+			<item value="search"/>
+			<item value="post-content"/>
+			<item value="post"/>
+			<item value="tmp.append(&quot;&quot;);"/>
+			<item value="&#x09;&#x09;tmp.append(&quot;&quot;);"/>
+			<item value="page=&quot;"/>
+			<item value="assets/vendor"/>
+			<item value="assets/img"/>
+			<item value="user"/>
+			<item value="trash"/>
+			<item value="CPool"/>
+			<item value="s.category_manager_id"/>
+			<item value="c.category_id"/>
+			<item value="CategoryObject"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="page=&quot;/home/gioi-thieu/"/>
+			<item value="/home/img"/>
+			<item value="CategoryOject"/>
+			<item value="Category"/>
+			<item value="cm"/>
+			<item value="CategoryModel"/>
+			<item value="CategoryObject"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1206"/>
+		<item key="DIALOG_Y_ORIGIN" value="166"/>
+		<item key="DIALOG_WIDTH" value="459"/>
+		<item key="DIALOG_HEIGHT" value="467"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.216|0|WINDOWS|1|-16|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>
